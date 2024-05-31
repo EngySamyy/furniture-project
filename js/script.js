@@ -42,7 +42,9 @@ window.addEventListener("scroll", function () {
         </div> */
 }
 
-fetch("http://localhost:1337/api/products?populate=image")
+fetch(
+  "https://stylish-deer-64895ba9aa.strapiapp.com/api/products?populate=image"
+)
   .then((res) => {
     console.log(res);
     return res.json();
@@ -55,7 +57,7 @@ fetch("http://localhost:1337/api/products?populate=image")
 
     data.forEach((element, index) => {
       element.attributes["id"] = element.id;
-      element.attributes["image"] = "http://localhost:1337" + element.attributes.image.data.attributes.url;
+      element.attributes["image"] = element.attributes.image.data.attributes.url;
       let newCard = createCard(element.attributes);
       container.appendChild(newCard);
     });
