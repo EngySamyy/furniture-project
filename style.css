@@ -1,0 +1,355 @@
+* {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bunner-color: #6a795f;
+    /* --main-color: #eaeaec;  */
+    --main-color : rgb(199, 157, 129);
+    --btn-color: #79422c;
+    --red: rgb(243, 7, 7);
+    --spare-color: #e4e4e4;
+    --white: #fff;
+    --black: #000;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* ========== Navigation =========== */
+nav.sticky {
+    padding: 5px 100px;
+    background: var(--white);
+}
+
+.navbar .navbar-brand {
+    color: var(--white);
+}
+
+nav.sticky a {
+    color: var(--black) !important; 
+    font-weight: 600;
+} 
+
+.navbar {
+    position: fixed;
+    background: var(--main-color);
+    width: 100%;
+    padding: 20px 0;
+    transition: 0.6s;
+    z-index: 999999999;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar .container .icons .icon {
+    border: 1px solid var(--btn-color);
+    padding: 9px;
+    border-radius: 50%;
+}
+
+.navbar .container .icons .icon:hover {
+    background: var(--btn-color);
+    transition: all ease-in 0.3s;
+}
+
+.navbar .container .icons .cart span{
+    background: var(--red);
+    position: absolute;
+    padding: 2px 5px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--white);
+}
+
+.icons {
+    gap: 20px;
+    font-weight: 500;
+}
+
+.navbar .container .icons a{
+    color: var(--white);
+}
+
+/* ========= Bunner =======  */
+.bunner {
+    background: var(--main-color);
+    height: 70vh;
+}
+
+.bunner .container .text {
+    position: relative;
+    top: 120px;
+    left: 40px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.bunner .container .text .fs-1 {
+    line-height: 40px;
+}
+
+.bunner .img-bunner {
+    position: absolute;
+    right: 140px;
+    top: 170px;
+}
+
+.bunner .image .img-lamb
+{
+    position: absolute;
+    top: 60px;
+    right: 70px;
+}
+
+.bunner .image .img {
+    position: absolute;
+    top: 60px;
+    right: 90px;
+    
+}
+
+.bunner .btn {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.bunner .btn-danger {
+    background: var(--btn-color);
+}
+
+.bunner .btn-warning {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.bunner .btn-warning:hover {
+    background: var(--btn-color);
+}
+
+/* ======== Products ======== */
+#main-section {
+    position: relative;
+    top: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.listProduct {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--black);
+    padding: 10px 0;
+}
+
+.listProduct img {
+    margin-bottom: 40px;
+    width: 50%;
+    filter: drop-shadow(0 10px 20px #000);
+}
+
+.listProduct .text-product{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.listProduct .addCart {
+    padding: 5px 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    border: none;
+    background: var(--btn-color);
+    color: var(--white);
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+/* ============= Menu of product page ============ */
+
+
+/* ======== CartTab ========== */
+.cartTab {
+    width: 400px;
+    background: var(--btn-color);
+    color: var(--white);
+    position: fixed;
+    inset: 63px 0 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn button{
+    background: var(--main-color);
+    width: 49%;
+    padding: 10px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* ========= start media query ========= */
+@media (max-width: 799px) {
+
+    
+/* ========= Bunner =======  */
+.bunner {
+    background: var(--main-color);
+    height: 45vh;
+}
+
+.bunner .container .text {
+    text-align: center;
+    top: 90px;
+    left: auto;
+}
+
+.bunner .container .text .fs-1 {
+    line-height: 40px;
+    
+}
+
+.bunner .container .text .fs-1 span {
+    display: inline-block !important;
+}
+
+.bunner .image {
+    position: relative;
+}
+
+.bunner .img-bunner {
+    position: absolute;
+    width: 65%;
+    right: 8rem;
+    top: 0;
+}
+
+.bunner .image .img-lamb {
+    position: absolute;
+    width: 55%;
+    top: -80px;
+    right: 90px;
+}
+
+.bunner .image .img {
+    position: absolute;
+    width: 60%;
+    top: -40px;
+    right: 120px;
+}
+
+.bunner .container .text .buttons {
+    display: block;
+}
+
+.bunner .btn {
+    position: relative;
+    top: 25rem;
+    width: 100%;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.bunner .btn-danger {
+    background: var(--btn-color);
+}
+
+.bunner .btn-warning {
+    background: transparent;
+    border: 2px solid var(--btn-color);
+    color: var(--btn-color);
+}
+
+.bunner .btn-warning:hover {
+    background: var(--btn-color);
+}
+
+/* ======== Products ======== */
+#main-section {
+    position: relative;
+    top: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.listProduct {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--black);
+    padding: 10px 0;
+}
+
+.listProduct img {
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.listProduct .text-product{
+    font-size: 20px;
+}
+
+/* .listProduct .addCart {
+    padding: 5px 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    border: none;
+    background: var(--btn-color);
+    color: var(--white);
+    border-radius: 50px;
+    margin-top: 20px;
+} */
+}
+
+
+
+/* // Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... } */
