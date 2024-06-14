@@ -41,6 +41,26 @@ function createCard(element) {
   return div;
 }
 
+function categoryCards (category) {
+  let sectionCategory = document.createElement("section");
+  sectionCategory.classList.add("category");
+
+  console.log(category);
+  let categoryDiv = document.createElement("div");
+  categoryDiv.classList.add("cat-icons");
+  // categoryDiv.innerHTML = '<i class="fa-solid fa-bed"></i>';
+
+  let btnIcon = document.createElement("button");
+  btnIcon
+  btnIcon.innerHTML = '<i class="fa-solid fa-bed"></i>'
+
+
+  sectionCategory.appendChild(categoryDiv);
+  categoryDiv.appendChild(btnIcon);
+
+  return sectionCategory;
+}
+
 
 function addToCart (element) {
   
