@@ -17,7 +17,7 @@ function createCard(element) {
 
   let btn = document.createElement("button");
   btn.classList.add("addCart");
-  btn.innerHTML = "add to cart";
+  btn.innerHTML.add = "<i class="fa-solid fa-cart-shopping"></i>";
   btn.onclick = function (){
     addToCart(element)
   };
