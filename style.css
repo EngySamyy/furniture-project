@@ -452,7 +452,7 @@ footer ul li a:hover {
     /* ========= Bunner =======  */
 .bunner {
     background: var(--main-color);
-    height: 65vh;
+    height: 365px;
 }
 
 .bunner .container .text {
