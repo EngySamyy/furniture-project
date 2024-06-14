@@ -8,13 +8,23 @@
 :root {
     --bunner-color: #6a795f;
     /* --main-color: #eaeaec;  */
+    --main-bg: #fff8ee;
     --main-color : rgb(199, 157, 129);
-    --btn-color: #79422c;
+    --border-color: #79422c;
+    --btn-color: #af8443;
     --red: rgb(243, 7, 7);
     --spare-color: #e4e4e4;
     --white: #fff;
     --black: #000;
+    
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 95%;
 }
+
+/* body {
+    background: var(--main-bg);
+} */
 
 li {
     list-style: none;
@@ -134,7 +144,8 @@ nav.sticky a {
     text-transform: capitalize;
 }
 .bunner .btn-danger {
-    background: var(--btn-color);
+    background: var(--border-color);
+    border: 1px solid var(--btn-color);
 }
 
 .bunner .btn-warning {
@@ -144,13 +155,12 @@ nav.sticky a {
 }
 
 .bunner .btn-warning:hover {
-    background: var(--btn-color);
+    background: var(--border-color);
 }
 
 /* ======== Products ======== */
 #main-section {
-    position: relative;
-    top: 180px;
+    padding: 150px 0 70px 0;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -164,30 +174,68 @@ nav.sticky a {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    background: var(--white);
     border: 1px solid var(--black);
-    padding: 10px 0;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.listProduct:hover {
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .listProduct img {
     margin-bottom: 40px;
-    width: 50%;
+    width: 60%;
+    display: flex;
+    align-items: center;
     filter: drop-shadow(0 10px 20px #000);
+}
+
+.listProduct .price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--border-color);
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    gap: 80px;
+}
+
+.listProduct .rate {
+    color: var(--border-color);
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
 }
 
 .listProduct .text-product{
     font-weight: 500;
-    font-size: 25px;
+    font-size: 23px;
+    width: 100%;
+    text-align: left;
+}
+
+.listProduct .info {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
 }
 
 .listProduct .addCart {
-    padding: 5px 20px;
+    padding: 9px 13px;
     text-transform: capitalize;
     font-weight: 400;
-    border: none;
+    border: 1px solid var(--border-color);
     background: var(--btn-color);
     color: var(--white);
     border-radius: 50px;
-    margin-top: 20px;
+}
+
+.listProduct .addCart:hover {
+    background: var(--border-color);
 }
 
 /* ============= Menu of product page ============ */
@@ -220,10 +268,55 @@ nav.sticky a {
 }
 
 
+/* Start Footer */
+footer {
+    background: var(--main-color);
+    padding-top: 2rem;
+    font-size: 0.8rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.footer-container > div h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer-1 a:hover {
+    color: var(--color-white);
+}
+
+.footer-1{
+    margin: 0 0 1rem 30px;
+}
+
+footer ul li {
+    margin-bottom: 0.6rem;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: var(--color-white);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+
 /* ========= start media query ========= */
 @media (max-width: 799px) {
-
-    
 /* ========= Bunner =======  */
 .bunner {
     background: var(--main-color);
@@ -238,7 +331,6 @@ nav.sticky a {
 
 .bunner .container .text .fs-1 {
     line-height: 40px;
-    
 }
 
 .bunner .container .text .fs-1 span {
@@ -339,6 +431,145 @@ nav.sticky a {
     margin-top: 20px;
 } */
 }
+
+/* Mobiles */
+@media screen and (max-width: 477px) {
+    /* ========= Navbar ======= */
+    nav.sticky {
+        padding: 5px 0px;
+    }
+
+    .navbar .container {
+        justify-content: space-evenly;
+        width: var(--container-width-sm);
+    }
+
+    /* ========= Bunner =======  */
+.bunner {
+    background: var(--main-color);
+    height: 76vh;
+}
+
+.bunner .container .text {
+    width: var(--container-width-sm);
+}
+
+.bunner .img-bunner {
+    position: absolute;
+    width: 65%;
+    right: 8rem;
+    top: -35px;
+}
+
+.bunner .image .img-lamb {
+    position: absolute;
+    width: 49%;
+    top: -80px;
+    right: 103px
+}
+
+.bunner .image .img {
+    position: absolute;
+    width: 60%;
+    top: -70px;
+    right: 118px;
+}
+
+.bunner .container .text .buttons {
+    display: block;
+}
+
+.bunner .btn {
+    position: relative;
+    top: 25rem;
+    width: 100%;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.bunner .btn-danger {
+    background: var(--btn-color);
+}
+
+.bunner .btn-warning {
+    background: transparent;
+    border: 2px solid var(--btn-color);
+    color: var(--btn-color);
+}
+
+.bunner .btn-warning:hover {
+    background: var(--btn-color);
+}
+
+
+/* ======== Products ======== */
+#main-section {
+    position: static;
+    top: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--container-width-sm);
+    justify-content: center;
+    gap: 10px;
+}
+
+.listProduct {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--black);
+    padding: 10px 0;
+}
+
+.listProduct img {
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.listProduct .text-product{
+    font-size: 20px;
+    text-align: center;
+}
+
+.listProduct .info {
+    text-align: center;
+}
+
+    /* Start Footer */
+footer {
+    background: var(--main-color);
+    padding-top: 2rem;
+    font-size: 0.8rem;
+}
+
+footer .container {
+    width: var(--container-width-sm);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.footer-container > div h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-1 a:hover {
+    color: var(--color-white);
+}
+
+.footer-1{
+    margin: 0 0 1rem 15px;
+}
+
+} 
 
 
 

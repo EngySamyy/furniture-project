@@ -11,21 +11,32 @@ function createCard(element) {
   text.classList.add("text-product");
   text.innerHTML = element.title ;
 
+  let info = document.createElement("p");
+  info.classList.add("info");
+  info.innerHTML = "descriptiob product";
+
   let price = document.createElement("span");
   price.classList.add("price");
   price.innerHTML = element.price + " " + "$";
 
+  let rate = document.createElement("span");
+  rate.classList.add("rate")
+  rate.innerHTML = '<i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i>'
+
   let btn = document.createElement("button");
   btn.classList.add("addCart");
-  btn.innerHTML.add = "<i class="fa-solid fa-cart-shopping"></i>";
+  btn.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>';
   btn.onclick = function (){
     addToCart(element)
   };
 
   div.appendChild(image);
   div.appendChild(text);
+  div.appendChild(info);
   div.appendChild(price);
-  div.appendChild(btn);
+  div.appendChild(rate);
+  price.appendChild(btn);
+  
 
   return div;
 }
