@@ -445,14 +445,17 @@ footer ul li a:hover {
         width: var(--container-width-sm);
     }
 
+    .navbar-toggler  {
+        outline: none;
+    }
+
     /* ========= Bunner =======  */
 .bunner {
     background: var(--main-color);
-    height: 32vh;
+    height: 65vh;
 }
 
 .bunner .container .text {
-    width: var(--container-width-sm);
     font-size: 13px;
     font-weight: 500;
 }
@@ -479,17 +482,18 @@ footer ul li a:hover {
     position: absolute;
     width: 60%;
     top: -60px;
-    right: 7cqb;
+    right: 73px;
 }
 
 .bunner .container .text .buttons {
     display: block;
+    width: 100%;
+
 }
 
 .bunner .btn {
     position: relative;
     top: 15rem;
-    width: 100%;
     padding: 10px 20px;
     margin-bottom: 20px;
     font-size: 20px;
